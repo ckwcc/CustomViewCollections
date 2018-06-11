@@ -16,4 +16,18 @@
         <attr name="selectorValue" format="float"/>
         <attr name="perValue" format="float"/>
     </declare-styleable>
+
+    <declare-styleable name="CircleLevelView">
+        <attr name="externalRadius" format="dimension"/>
+        <attr name="externalColor" format="color"/>
+        <attr name="innerRadius" format="dimension"/>
+        <attr name="innerColor" format="color"/>
+        <attr name="percentColor" format="color"/>
+        <attr name="startAngle" format="float"/>
+        <attr name="endAngle" format="float"/>
+        <attr name="centerTextColor" format="color"/>
+        <attr name="centerTextSize" format="dimension"/>
+        <attr name="isPercent" format="boolean"/>
+    </declare-styleable>
+
 </resources>

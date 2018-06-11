@@ -1,4 +1,4 @@
-package com.ckw.customviewcollections.rulerview
+package com.ckw.customviewcollections.ruler_view
 
 import android.content.Context
 import android.graphics.Canvas

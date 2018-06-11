@@ -8,11 +8,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
-import com.ckw.customviewcollections.rulerview.RulerView
-import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.TextView
 import android.view.ViewGroup
-import com.ckw.customviewcollections.rulerview.RulerViewActivity
+import com.ckw.customviewcollections.level_view.LevelViewActivity
+import com.ckw.customviewcollections.ruler_view.RulerViewActivity
 
 
 class MainActivity : AppCompatActivity(), ItemClickListener {
@@ -26,6 +25,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
 
         var datas = ArrayList<String>()
         datas.add("RulerView:尺子选择器")
+        datas.add("LevelView:等级显示器")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter
@@ -35,6 +35,19 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
     }
 
     override fun setOnItemClick(position: Int) {
+        var intent: Intent? = null
+        when (position) {
+            0 -> {
+                intent = Intent(this,RulerViewActivity::class.java)
+                startActivity(intent)
+            }
+            1 -> {
+                intent = Intent(this,LevelViewActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+
         if(position == 0){
             startActivity(Intent(this,RulerViewActivity::class.java))
         }

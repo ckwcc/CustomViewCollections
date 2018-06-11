@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".rulerview.RulerViewActivity" />
+        <activity android:name=".ruler_view.RulerViewActivity" />
+        <activity android:name=".level_view.LevelViewActivity" />
     </application>
 
 </manifest>

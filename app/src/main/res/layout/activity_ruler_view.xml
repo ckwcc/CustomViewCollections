@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.ckw.customviewcollections.rulerview.RulerView
+    <com.ckw.customviewcollections.ruler_view.RulerView
         android:id="@+id/ruler_view"
         android:layout_centerInParent="true"
         android:layout_width="400dp"

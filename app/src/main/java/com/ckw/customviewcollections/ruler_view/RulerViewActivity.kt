@@ -1,9 +1,9 @@
-package com.ckw.customviewcollections.rulerview
+package com.ckw.customviewcollections.ruler_view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 import com.ckw.customviewcollections.R
-import kotlinx.android.synthetic.main.activity_ruler_view.*
 
 /**
  * Created by ckw
@@ -11,16 +11,19 @@ import kotlinx.android.synthetic.main.activity_ruler_view.*
  */
 class RulerViewActivity: AppCompatActivity(), RulerView.OnValueChangeListener {
     override fun onValueChange(value: Float) {
-        tv_show_value.text = value.toString()
+        mTvShow!!.text = value.toString()
     }
 
+    private var mTvShow: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ruler_view)
 
-        ruler_view.setRulerViewParams(155f,100f,200f,0.1f)
-        ruler_view.setOnValueChangeListener(this)
+        val rulerView = findViewById<RulerView>(R.id.ruler_view)
+        mTvShow = findViewById(R.id.tv_show_value)
+        rulerView.setRulerViewParams(155f,100f,200f,0.1f)
+        rulerView.setOnValueChangeListener(this)
 
     }
 }
