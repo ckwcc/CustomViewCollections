@@ -22,5 +22,9 @@ class LevelViewActivity : AppCompatActivity() {
 //        circleLevelView.setAngle(0f,100f)
         //通过设置百分比
         circleLevelView.setValue(55.746f)
+
+        val circleVerticalView = findViewById<CircleVerticalView>(R.id.circle_vertical_view)
+//        circleVerticalView.setVerticalProgress(50f)
+        circleVerticalView.start()
     }
 }

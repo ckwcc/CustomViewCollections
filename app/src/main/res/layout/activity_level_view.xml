@@ -6,7 +6,7 @@
 
     <com.ckw.customviewcollections.level_view.CircleLevelView
         android:id="@+id/circle_level_view"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         app:externalRadius="60dp"
         app:innerRadius="50dp"
         app:endAngle="250"
@@ -19,5 +19,21 @@
         app:innerColor="@color/colorWhite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <com.ckw.customviewcollections.level_view.CircleVerticalView
+        android:id="@+id/circle_vertical_view"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:circleVerticalViewBgColor="@color/gray"
+        app:circleVerticalViewRadius="50dp"
+        app:verticalPercent="59.56"
+        app:waveHeight="4dp"
+        app:waveWidth="30dp"
+        app:circleVerticalTextSize="10sp"
+        app:circleVerticalTextColor="@color/black"
+        app:waveColor="@color/colorYellow"
+         />
 
 </RelativeLayout>

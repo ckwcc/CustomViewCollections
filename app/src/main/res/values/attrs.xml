@@ -30,4 +30,15 @@
         <attr name="isPercent" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="CircleVerticalView">
+        <attr name="circleVerticalViewRadius" format="dimension"/>
+        <attr name="circleVerticalViewBgColor" format="color"/>
+        <attr name="verticalPercent" format="float"/>
+        <attr name="waveColor" format="color"/>
+        <attr name="waveWidth" format="dimension"/>
+        <attr name="waveHeight" format="dimension"/>
+        <attr name="circleVerticalTextSize" format="dimension"/>
+        <attr name="circleVerticalTextColor" format="color"/>
+    </declare-styleable>
+
 </resources>
