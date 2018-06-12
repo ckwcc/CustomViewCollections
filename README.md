@@ -1,1 +1,5 @@
 # CustomViewCollections
+这是一个基于Kotlin的自定义View集合
+1.RulerView
+2.CircleLevelView
+3.CircleVerticalView
