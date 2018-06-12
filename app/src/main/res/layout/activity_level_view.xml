@@ -31,6 +31,8 @@
         app:verticalPercent="59.56"
         app:waveHeight="4dp"
         app:waveWidth="30dp"
+        app:horizontalDuration="2500"
+        app:verticalDuration="8000"
         app:circleVerticalTextSize="10sp"
         app:circleVerticalTextColor="@color/black"
         app:waveColor="@color/colorYellow"

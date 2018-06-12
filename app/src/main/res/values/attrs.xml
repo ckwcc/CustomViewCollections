@@ -39,6 +39,8 @@
         <attr name="waveHeight" format="dimension"/>
         <attr name="circleVerticalTextSize" format="dimension"/>
         <attr name="circleVerticalTextColor" format="color"/>
+        <attr name="verticalDuration" format="integer"/>
+        <attr name="horizontalDuration" format="integer"/>
     </declare-styleable>
 
 </resources>

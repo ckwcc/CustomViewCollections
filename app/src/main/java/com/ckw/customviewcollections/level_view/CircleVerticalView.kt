@@ -61,6 +61,9 @@ class CircleVerticalView : View{
     private var mTextSize = 24f
     private var mTextColor = Color.RED
 
+    private var mVerticalDuration = 8000
+    private var mHorizontalDuration = 2500
+
     constructor(context: Context?) : this(context,null)
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs,0)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr){
@@ -79,6 +82,8 @@ class CircleVerticalView : View{
         mWaveColor = typedArray.getColor(R.styleable.CircleVerticalView_waveColor,mWaveColor)
         mTextSize = typedArray.getDimension(R.styleable.CircleVerticalView_circleVerticalTextSize,mTextSize)
         mTextColor = typedArray.getColor(R.styleable.CircleVerticalView_circleVerticalTextColor,mTextColor)
+        mVerticalDuration = typedArray.getInteger(R.styleable.CircleVerticalView_verticalDuration,mVerticalDuration)
+        mHorizontalDuration = typedArray.getInteger(R.styleable.CircleVerticalView_horizontalDuration,mHorizontalDuration)
 
         mTextPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         mTextPaint!!.textSize = mTextSize
@@ -199,8 +204,8 @@ class CircleVerticalView : View{
             invalidate()
         }
 
-        horizontalAnimator.duration = 2500
-        verticalAnimator.duration = 8000
+        horizontalAnimator.duration = mHorizontalDuration.toLong()
+        verticalAnimator.duration = mVerticalDuration.toLong()
         horizontalAnimator.start()
         verticalAnimator.start()
 

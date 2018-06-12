@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
 
         var datas = ArrayList<String>()
         datas.add("RulerView:尺子选择器")
-        datas.add("LevelView:等级显示器")
+        datas.add("LevelView:进度显示器")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter

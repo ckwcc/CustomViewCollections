@@ -62,6 +62,8 @@
   app:circleVerticalTextSize="10sp"
   app:circleVerticalTextColor="@color/black"
   app:waveColor="@color/colorYellow"//波浪颜色
+  app:horizontalDuration="2500"
+  app:verticalDuration="8000"
  ```
  
  ```java

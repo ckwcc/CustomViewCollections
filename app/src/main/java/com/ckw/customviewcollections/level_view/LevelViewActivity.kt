@@ -18,13 +18,13 @@ class LevelViewActivity : AppCompatActivity() {
         //以下两个方法的设置需要在setAngle或者setValue之前
         circleLevelView.setAnimationDuration(2500)
         circleLevelView.setIsPercent(true)
-        //通过设置初始和结束的角度
-//        circleLevelView.setAngle(0f,100f)
-        //通过设置百分比
+        //方法1：通过设置初始和结束的角度
+        circleLevelView.setAngle(0f,100f)
+        //方法2：通过设置百分比
         circleLevelView.setValue(55.746f)
 
         val circleVerticalView = findViewById<CircleVerticalView>(R.id.circle_vertical_view)
-//        circleVerticalView.setVerticalProgress(50f)
+        circleVerticalView.setVerticalProgress(50f)
         circleVerticalView.start()
     }
 }
