@@ -1,7 +1,7 @@
 # CustomViewCollections
 这是一个基于Kotlin的自定义View集合
 
-##1.RulerView
+## 1.RulerView
 ```java
   app:alphaEnable="true"
   app:lineColor="@color/gray"
@@ -25,9 +25,9 @@
 
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/rulerview.gif)
 
-##2.CircleLevelView和CircleVerticalView
+## 2.CircleLevelView和CircleVerticalView
 
-###2.1 CircleLevelView
+### 2.1 CircleLevelView
 
 ```java
   app:externalRadius="60dp"//外圆半径
@@ -52,7 +52,7 @@
   //方法2：通过设置百分比
   circleLevelView.setValue(55.746f)
 ```
-###2.2 CircleVerticalView
+### 2.2 CircleVerticalView
 
  ```java
   app:circleVerticalViewRadius="50dp"//圆的半径
