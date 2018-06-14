@@ -74,3 +74,36 @@
  效果图：
  
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/levelview.gif)
+
+## 3.TagViewLayout和TagView
+
+###TagViewLayout
+   TagViewLayout是TagView的容器，首先看一下TagViewLayout
+   对外提供一个方法,用于添加TagView
+```java
+   tagViewLayout.addTagView(tagView)
+```
+   或者可以在xml中的TagViewLayout内直接添加TagView
+
+###TagView
+   xml属性：
+```java
+   app:tagViewText="这是为你好"
+   app:tagViewTextColor="@color/black"
+   app:tagViewTextSize="10sp"
+   app:tagViewCorner="16dp"
+   app:tagViewBgColor="@color/colorYellow"
+```
+    或者也可以在java中动态生成TagView:
+```java
+   val tagView = TagView(this)
+   tagView.setMargins(4,4,4,4)//单位是dp
+   tagView.setTagViewCorner(20)//单位是dp
+   tagView.setTagViewBackground(Color.YELLOW)
+   tagView.setTagViewText("世界那么大,看看")
+   tagView.setTagViewTextSize(10)//单位是sp
+   tagView.setTagViewTextColor(Color.RED)
+```
+ 效果图：
+
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/tagview.jpg)

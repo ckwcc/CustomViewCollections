@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.view.ViewGroup
 import com.ckw.customviewcollections.level_view.LevelViewActivity
 import com.ckw.customviewcollections.ruler_view.RulerViewActivity
+import com.ckw.customviewcollections.tag_view.TagViewActivity
 
 
 class MainActivity : AppCompatActivity(), ItemClickListener {
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
         var datas = ArrayList<String>()
         datas.add("RulerView:尺子选择器")
         datas.add("LevelView:进度显示器")
+        datas.add("TagViewLayout:流式布局")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter
@@ -43,6 +45,10 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
             }
             1 -> {
                 intent = Intent(this,LevelViewActivity::class.java)
+                startActivity(intent)
+            }
+            2 -> {
+                intent = Intent(this,TagViewActivity::class.java)
                 startActivity(intent)
             }
         }

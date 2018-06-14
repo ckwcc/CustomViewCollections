@@ -43,4 +43,12 @@
         <attr name="horizontalDuration" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="TagView">
+        <attr name="tagViewBgColor" format="color"/>
+        <attr name="tagViewTextSize" format="dimension"/>
+        <attr name="tagViewTextColor" format="color"/>
+        <attr name="tagViewText" format="string"/>
+        <attr name="tagViewCorner" format="dimension"/>
+    </declare-styleable>
+
 </resources>
