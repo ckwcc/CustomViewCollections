@@ -20,6 +20,7 @@
         <activity android:name=".level_view.LevelViewActivity" />
         <activity android:name=".tag_view.TagViewActivity" />
         <activity android:name=".drag_view.DragViewActivity" />
+        <activity android:name=".star_view.StarViewActivity" />
     </application>
 
 </manifest>

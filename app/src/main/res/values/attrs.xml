@@ -51,4 +51,11 @@
         <attr name="tagViewCorner" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="StarViewLayout">
+        <attr name="starMargin" format="dimension"/>
+        <attr name="starNumber" format="integer"/>
+        <attr name="defaultStar" format="reference"/>
+        <attr name="lightStar" format="reference"/>
+    </declare-styleable>
+
 </resources>

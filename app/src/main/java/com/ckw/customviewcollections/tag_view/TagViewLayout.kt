@@ -117,7 +117,7 @@ class TagViewLayout : ViewGroup {
         var childHeight: Int
 
         for (index in 0 until childCount){
-            var view = getChildAt(index)
+            val view = getChildAt(index)
 
             if(view.layoutParams is MarginLayoutParams){
                 lp = view.layoutParams as MarginLayoutParams

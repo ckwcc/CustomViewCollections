@@ -19,9 +19,6 @@ class DragView : View {
 
     private var mBgPaint: Paint? = null
 
-    private var mWindowWidth = 0
-    private var mWindowHeight = 0
-
     private var mDownX = 0f;
     private var mDownY = 0f;
 
@@ -33,9 +30,6 @@ class DragView : View {
 
     private fun init(context: Context, attrs: AttributeSet) {
         val systemService = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
-        mWindowWidth = systemService.defaultDisplay.width
-        mWindowHeight = systemService.defaultDisplay.height
-
         mBgPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         mBgPaint!!.color = Color.YELLOW
         mBgPaint!!.style = Paint.Style.FILL_AND_STROKE
@@ -53,31 +47,42 @@ class DragView : View {
 
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        when(event!!.action){
-            MotionEvent.ACTION_DOWN -> {
-                mDownX = event.x
-                mDownY = event.y
-            }
-            MotionEvent.ACTION_MOVE -> {
-                val moveX = event.x - mDownX
-                val moveY = event.y - mDownY
+        super.onTouchEvent(event)
+        if(isEnabled){
+            when(event!!.action){
+                MotionEvent.ACTION_DOWN -> {
+                    mDownX = event.x
+                    mDownY = event.y
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    val moveX = event.x - mDownX
+                    val moveY = event.y - mDownY
 
-                if(moveX != 0f && moveY != 0f){
-                    val l = left + moveX
-                    val t = top + moveY
-                    val r = right + moveX
-                    val b = bottom + moveY
+                    if(moveX != 0f && moveY != 0f){
+                        val l = left + moveX
+                        val t = top + moveY
+                        val r = right + moveX
+                        val b = bottom + moveY
 
-                    this.layout(l.toInt(),t.toInt(),r.toInt(),b.toInt())
+                        this.layout(l.toInt(),t.toInt(),r.toInt(),b.toInt())
 
+                    }
+                }
+
+                MotionEvent.ACTION_UP -> {
+                    isPressed = false
+                }
+
+                MotionEvent.ACTION_CANCEL -> {
+                    isPressed = false
                 }
             }
 
-            MotionEvent.ACTION_UP -> {
-
-            }
+            return true
         }
-        return true
+
+        return false
+
     }
 
 
