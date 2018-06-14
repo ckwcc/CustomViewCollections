@@ -77,7 +77,8 @@
 
 ## 3.TagViewLayout和TagView
 
-###TagViewLayout
+### TagViewLayout
+
    TagViewLayout是TagView的容器，首先看一下TagViewLayout
    对外提供一个方法,用于添加TagView
 ```java
@@ -85,7 +86,8 @@
 ```
    或者可以在xml中的TagViewLayout内直接添加TagView
 
-###TagView
+### TagView
+
    xml属性：
 ```java
    app:tagViewText="这是为你好"
@@ -94,7 +96,8 @@
    app:tagViewCorner="16dp"
    app:tagViewBgColor="@color/colorYellow"
 ```
-    或者也可以在java中动态生成TagView:
+  或者也可以在java中动态生成TagView:
+  
 ```java
    val tagView = TagView(this)
    tagView.setMargins(4,4,4,4)//单位是dp
