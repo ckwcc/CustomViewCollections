@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import android.view.ViewGroup
+import com.ckw.customviewcollections.drag_view.DragViewActivity
 import com.ckw.customviewcollections.level_view.LevelViewActivity
 import com.ckw.customviewcollections.ruler_view.RulerViewActivity
 import com.ckw.customviewcollections.tag_view.TagViewActivity
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
         datas.add("RulerView:尺子选择器")
         datas.add("LevelView:进度显示器")
         datas.add("TagViewLayout:流式布局")
+        datas.add("DragView:可以拖动的View")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter
@@ -51,12 +53,12 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
                 intent = Intent(this,TagViewActivity::class.java)
                 startActivity(intent)
             }
+            3 -> {
+                intent = Intent(this,DragViewActivity::class.java)
+                startActivity(intent)
+            }
         }
 
-
-        if(position == 0){
-            startActivity(Intent(this,RulerViewActivity::class.java))
-        }
     }
 
 

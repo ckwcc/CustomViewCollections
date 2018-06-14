@@ -8,6 +8,7 @@ import com.ckw.customviewcollections.R
 /**
  * Created by ckw
  * on 2018/6/13.
+ * 流式布局
  */
 class TagViewActivity: AppCompatActivity() {
 
@@ -30,7 +31,7 @@ class TagViewActivity: AppCompatActivity() {
             val tagView = TagView(this)
             tagView.setMargins(4,4,4,4)
             tagView.setTagViewBackground(Color.RED)
-            tagView.setTagViewCorner(0)
+            tagView.setTagViewCorner(index)
             tagView.setTagViewText("中国人")
             tagView.setTagViewTextSize(10)
             tagView.setTagViewTextColor(Color.BLACK)

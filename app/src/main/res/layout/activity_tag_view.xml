@@ -6,6 +6,8 @@
 
     <com.ckw.customviewcollections.tag_view.TagViewLayout
         android:id="@+id/tag_view_layout"
+        android:padding="4dp"
+        android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.ckw.customviewcollections.tag_view.TagView

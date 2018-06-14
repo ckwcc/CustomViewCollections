@@ -19,6 +19,7 @@
         <activity android:name=".ruler_view.RulerViewActivity" />
         <activity android:name=".level_view.LevelViewActivity" />
         <activity android:name=".tag_view.TagViewActivity" />
+        <activity android:name=".drag_view.DragViewActivity" />
     </application>
 
 </manifest>
