@@ -17,4 +17,16 @@
 
     </com.ckw.customviewcollections.star_view.StarViewLayout>
 
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="清空"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>

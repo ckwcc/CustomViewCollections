@@ -2,6 +2,7 @@ package com.ckw.customviewcollections.star_view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Button
 import android.widget.Toast
 import com.ckw.customviewcollections.R
 
@@ -19,6 +20,11 @@ class StarViewActivity : AppCompatActivity(), StarViewLayout.StarClickListener {
         setContentView(R.layout.activity_star_view)
         val starViewLayout = findViewById<StarViewLayout>(R.id.star_view_layout)
         starViewLayout.setStarClickListener(this)
+
+        val btnClear = findViewById<Button>(R.id.btn_clear)
+        btnClear.setOnClickListener {
+            starViewLayout.revertToDefaultState()
+        }
 
     }
 }

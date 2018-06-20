@@ -104,6 +104,16 @@ class StarViewLayout : ViewGroup {
         }
     }
 
+    /*
+    * 回复默认状态
+    * */
+    fun revertToDefaultState() {
+        for (index in 0 until childCount){
+            val view = getChildAt(index) as ImageView
+            view.setImageResource(mDefaultResourceId!!)
+        }
+    }
+
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */
