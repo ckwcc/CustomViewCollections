@@ -21,6 +21,8 @@
         <activity android:name=".tag_view.TagViewActivity" />
         <activity android:name=".drag_view.DragViewActivity" />
         <activity android:name=".star_view.StarViewActivity" />
+        <activity android:name=".study.interpolator_evaluator.InterpolatorEvaluatorActivity" />
+        <activity android:name=".study.ofobject.OfObjectActivity" />
     </application>
 
 </manifest>

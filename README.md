@@ -112,7 +112,7 @@
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/tagview.jpg)
 
 ## 4.StarViewLayout
-    StarViewLayout是类似于淘宝评价时评分的星星控件
+StarViewLayout是类似于淘宝评价时评分的星星控件
 ```java
     app:starNumber="5"//星星（图形）的数量
     app:defaultStar="@mipmap/star_default"//默认的图形
@@ -120,7 +120,7 @@
     app:starMargin="4dp"//图形间的间距
 ```
 
-    代码中的点击事件
+代码中的点击事件
 ```java
         //控件的点击事件
        starViewLayout.setStarClickListener(this)

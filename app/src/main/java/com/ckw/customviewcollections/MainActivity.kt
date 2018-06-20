@@ -14,6 +14,8 @@ import com.ckw.customviewcollections.drag_view.DragViewActivity
 import com.ckw.customviewcollections.level_view.LevelViewActivity
 import com.ckw.customviewcollections.ruler_view.RulerViewActivity
 import com.ckw.customviewcollections.star_view.StarViewActivity
+import com.ckw.customviewcollections.study.interpolator_evaluator.InterpolatorEvaluatorActivity
+import com.ckw.customviewcollections.study.ofobject.OfObjectActivity
 import com.ckw.customviewcollections.tag_view.TagViewActivity
 
 
@@ -32,6 +34,8 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
         datas.add("TagViewLayout:流式布局")
         datas.add("DragView:简单拖动的View")
         datas.add("StarView:点击显示得分图形控件")
+        datas.add("插值器和Evaluator的自定义使用")
+        datas.add("ValueAnimator.ofObject的使用")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter
@@ -61,6 +65,14 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
             }
             4 -> {
                 intent = Intent(this,StarViewActivity::class.java)
+                startActivity(intent)
+            }
+            5 -> {
+                intent = Intent(this, InterpolatorEvaluatorActivity::class.java)
+                startActivity(intent)
+            }
+            6 -> {
+                intent = Intent(this, OfObjectActivity::class.java)
                 startActivity(intent)
             }
         }
