@@ -23,7 +23,7 @@
 
 效果图：
 
-![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/rulerview.gif)
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/rulerview.gif)
 
 ## 2.CircleLevelView和CircleVerticalView
 
@@ -73,7 +73,7 @@
  
  效果图：
  
-![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/levelview.gif)
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/levelview.gif)
 
 ## 3.TagViewLayout和TagView
 
@@ -109,7 +109,7 @@
 ```
  效果图：
 
-![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/tagview.jpg)
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/tagview.jpg)
 
 ## 4.StarViewLayout
 StarViewLayout是类似于淘宝评价时评分的星星控件
@@ -135,7 +135,7 @@ StarViewLayout是类似于淘宝评价时评分的星星控件
 
 效果图：
 
-![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/starview.gif)
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/starview.gif)
 
 ## 5.PlayPauseView
 PlayPauseView是一个播放暂停按钮
@@ -167,4 +167,4 @@ PlayPauseView是一个播放暂停按钮
 
 效果图：
 
-![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/playpauseview.gif)
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/playpauseview.gif)
