@@ -58,4 +58,14 @@
         <attr name="lightStar" format="reference"/>
     </declare-styleable>
 
+    <declare-styleable name="PlayPauseView">
+        <attr name="barWidth" format="dimension"/>
+        <attr name="barHeight" format="dimension"/>
+        <attr name="barPadding" format="dimension"/>
+        <attr name="barColor" format="color"/>
+        <attr name="barBgColor" format="color"/>
+        <attr name="barClockWise" format="boolean"/>
+        <attr name="barPlayingState" format="boolean"/>
+    </declare-styleable>
+
 </resources>

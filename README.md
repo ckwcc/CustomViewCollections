@@ -136,3 +136,31 @@ StarViewLayout是类似于淘宝评价时评分的星星控件
 效果图：
 
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/starview.gif)
+
+## 5.PlayPauseView
+PlayPauseView是一个播放暂停按钮
+
+```java
+    app:barHeight="30dp"//矩形条的宽度
+    app:barWidth="10dp"//矩形条的高度
+    app:barPadding="20dp"//矩形条距离原点（边界）的距离
+    app:barClockWise="true"//是否是顺时针转动
+    app:barPlayingState="false"//默认的状态，播放或者暂停
+    app:barBgColor="@color/colorRed"//控件背景色
+    app:barColor="@color/black"//按钮颜色
+```
+
+代码中的点击事件
+```java
+        //控件的点击事件
+       val playPauseView = findViewById<PlayPauseView>(R.id.play_pause_view)
+       playPauseView.setPlayPauseListener(this)
+
+        override fun play() {
+            Toast.makeText(this,"现在处于播放状态",Toast.LENGTH_SHORT).show()
+        }
+
+        override fun pause() {
+            Toast.makeText(this,"现在处于暂停状态",Toast.LENGTH_SHORT).show()
+        }
+```

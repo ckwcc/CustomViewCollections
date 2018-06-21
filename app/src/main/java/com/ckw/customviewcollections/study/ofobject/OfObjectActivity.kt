@@ -43,7 +43,7 @@ class OfObjectActivity : AppCompatActivity() {
         mAnimator = ValueAnimator.ofObject(CharEvaluator(), 'A', 'Z')
         mAnimator!!.addUpdateListener { animation ->
             val text = animation.animatedValue as Char
-            mTvShow!!.setText(text.toString())
+            mTvShow!!.text = text.toString()
         }
         mAnimator!!.duration = 12000
         mAnimator!!.interpolator = LinearInterpolator()

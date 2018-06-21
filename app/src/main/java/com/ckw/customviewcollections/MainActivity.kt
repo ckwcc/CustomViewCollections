@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.view.ViewGroup
 import com.ckw.customviewcollections.drag_view.DragViewActivity
 import com.ckw.customviewcollections.level_view.LevelViewActivity
+import com.ckw.customviewcollections.playpause_view.PlayPauseActivity
 import com.ckw.customviewcollections.ruler_view.RulerViewActivity
 import com.ckw.customviewcollections.star_view.StarViewActivity
 import com.ckw.customviewcollections.study.interpolator_evaluator.InterpolatorEvaluatorActivity
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
         datas.add("StarView:点击显示得分图形控件")
         datas.add("插值器和Evaluator的自定义使用")
         datas.add("ValueAnimator.ofObject的使用")
+        datas.add("PlayPauseView:播放暂停控件")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter
@@ -73,6 +75,10 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
             }
             6 -> {
                 intent = Intent(this, OfObjectActivity::class.java)
+                startActivity(intent)
+            }
+            7 -> {
+                intent = Intent(this, PlayPauseActivity::class.java)
                 startActivity(intent)
             }
         }
