@@ -23,7 +23,7 @@
 
 效果图：
 
-![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/rulerview.gif)
+![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/rulerview.gif)
 
 ## 2.CircleLevelView和CircleVerticalView
 
@@ -73,7 +73,7 @@
  
  效果图：
  
-![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/levelview.gif)
+![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/levelview.gif)
 
 ## 3.TagViewLayout和TagView
 
@@ -109,7 +109,7 @@
 ```
  效果图：
 
-![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/tagview.jpg)
+![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/tagview.jpg)
 
 ## 4.StarViewLayout
 StarViewLayout是类似于淘宝评价时评分的星星控件
@@ -135,7 +135,7 @@ StarViewLayout是类似于淘宝评价时评分的星星控件
 
 效果图：
 
-![image](https://github.com/ckwcc/CustomViewCollections/blob/master/app/src/main/res/drawable/starview.gif)
+![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/starview.gif)
 
 ## 5.PlayPauseView
 PlayPauseView是一个播放暂停按钮
@@ -164,3 +164,7 @@ PlayPauseView是一个播放暂停按钮
             Toast.makeText(this,"现在处于暂停状态",Toast.LENGTH_SHORT).show()
         }
 ```
+
+效果图：
+
+![image](https://github.com/ckwcc/CustomViewCollections/tree/master/images/playpauseview.gif)
