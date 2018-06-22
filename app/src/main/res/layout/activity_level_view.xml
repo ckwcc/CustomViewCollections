@@ -38,4 +38,16 @@
         app:waveColor="@color/colorYellow"
          />
 
+    <com.ckw.customviewcollections.level_view.CirclePointView
+        android:id="@+id/circle_point_view"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:circlePointDefColor="@color/colorYellow"
+        app:circlePointAchieveColor="@color/colorRed"
+        app:circlePointAchievePercent="60"
+        app:circlePointTextColor="@color/colorRed"
+        app:circlePointTextSize="15sp"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
 </RelativeLayout>

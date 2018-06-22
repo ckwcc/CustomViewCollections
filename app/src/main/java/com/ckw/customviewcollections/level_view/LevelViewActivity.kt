@@ -26,5 +26,8 @@ class LevelViewActivity : AppCompatActivity() {
         val circleVerticalView = findViewById<CircleVerticalView>(R.id.circle_vertical_view)
         circleVerticalView.setVerticalProgress(50f)
         circleVerticalView.start()
+
+        val circlePointView = findViewById<CirclePointView>(R.id.circle_point_view)
+        circlePointView.setAchievePercent(88)
     }
 }

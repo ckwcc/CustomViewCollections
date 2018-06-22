@@ -138,7 +138,7 @@ class CircleVerticalView : View{
         val centerX = mWidth.div(2).toFloat()
         val centerY = mHeight.div(2).toFloat()
 
-        var text = String.format("%.2f",mProgressHeight.div(mViewRadius * 2) * 100).plus("%")
+        val text = String.format("%.2f",mProgressHeight.div(mViewRadius * 2) * 100).plus("%")
         val textWidth = mTextPaint!!.measureText(text)
         val textHeight = getFontHeight(mTextPaint!!)
         canvas!!.drawText(text,

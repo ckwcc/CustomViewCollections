@@ -25,7 +25,7 @@
 
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/rulerview.gif)
 
-## 2.CircleLevelView和CircleVerticalView
+## 2.各种进度条
 
 ### 2.1 CircleLevelView
 
@@ -70,6 +70,21 @@
   circleVerticalView.setVerticalProgress(50f)//如果xml中已经设置过了verticalPercent，这里可以不再设置
   circleVerticalView.start()//开始
  ```
+
+ ### 2.3 CirclePointView
+
+  ```java
+   app:circlePointDefColor="@color/colorYellow"//圆点默认的颜色
+   app:circlePointAchieveColor="@color/colorRed"//圆点进度颜色
+   app:circlePointAchievePercent="60"//达到的进度
+   app:circlePointTextColor="@color/colorRed"//中间文字颜色
+   app:circlePointTextSize="15sp"//中间文字大小
+  ```
+
+  ```java
+  //代码中也可以设置进度
+   circlePointView.setAchievePercent(88)
+  ```
  
  效果图：
  

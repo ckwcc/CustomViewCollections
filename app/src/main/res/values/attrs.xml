@@ -68,4 +68,12 @@
         <attr name="barPlayingState" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="CirclePointView">
+        <attr name="circlePointDefColor" format="color"/>
+        <attr name="circlePointAchieveColor" format="color"/>
+        <attr name="circlePointTextColor" format="color"/>
+        <attr name="circlePointTextSize" format="dimension"/>
+        <attr name="circlePointAchievePercent" format="integer"/>
+    </declare-styleable>
+
 </resources>
