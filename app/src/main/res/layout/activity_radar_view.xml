@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ckw.customviewcollections.radar_view.RadarView
+        android:id="@+id/radar_view"
+        app:radarBorderWidth="100dp"
+        app:radarAnimDuration="2000"
+        app:radarBorderColor="@color/colorRed"
+        app:radarOuterTextColor="@color/colorPrimary"
+        app:radarOuterTextSize="16sp"
+        app:radarOuterTextMargin="10dp"
+        app:radarInnerTextColor="@color/black"
+        app:radarInnerTextSize="8sp"
+        app:radarShowInnerText="true"
+        app:radarProgressColor="@color/colorYellow"
+        app:radarProgressAlpha="80"
+        app:radarBackgroundColor="@color/colorWhite"
+        app:radarBackgroundAlpha="255"
+        android:background="@color/gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

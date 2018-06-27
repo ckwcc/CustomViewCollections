@@ -76,4 +76,20 @@
         <attr name="circlePointAchievePercent" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="RadarView">
+        <attr name="radarBorderWidth" format="dimension"/>
+        <attr name="radarAnimDuration" format="integer"/>
+        <attr name="radarBorderColor" format="color"/>
+        <attr name="radarOuterTextColor" format="color"/>
+        <attr name="radarOuterTextSize" format="dimension"/>
+        <attr name="radarInnerTextColor" format="color"/>
+        <attr name="radarInnerTextSize" format="dimension"/>
+        <attr name="radarShowInnerText" format="boolean"/>
+        <attr name="radarProgressColor" format="color"/>
+        <attr name="radarProgressAlpha" format="integer"/>
+        <attr name="radarBackgroundColor" format="color"/>
+        <attr name="radarBackgroundAlpha" format="integer"/>
+        <attr name="radarOuterTextMargin" format="dimension"/>
+    </declare-styleable>
+
 </resources>

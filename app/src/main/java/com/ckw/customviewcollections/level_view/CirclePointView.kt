@@ -96,6 +96,7 @@ class CirclePointView : View {
 
         mOuterCircleRadius = mWidth.div(2)
         //按照公式应该是0.9,360/200 = 1.8 每个圆占1.8度，1.8/2 = 0.9画出来圆点间隔有点大，就用了1.0
+        //Math.sin的参数需要度数所代表的弧度
         val sin1 = Math.sin(Math.toRadians(1.0))
         mPointRadius = (sin1 * mOuterCircleRadius / (1 + sin1)).toFloat()
 

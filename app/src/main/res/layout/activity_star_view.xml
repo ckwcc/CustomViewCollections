@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <com.ckw.customviewcollections.star_view.StarViewLayout
         android:id="@+id/star_view_layout"
         android:layout_centerInParent="true"

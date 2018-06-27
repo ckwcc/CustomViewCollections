@@ -24,6 +24,7 @@
         <activity android:name=".study.interpolator_evaluator.InterpolatorEvaluatorActivity" />
         <activity android:name=".study.ofobject.OfObjectActivity" />
         <activity android:name=".playpause_view.PlayPauseActivity" />
+        <activity android:name=".radar_view.RadarViewActivity" />
     </application>
 
 </manifest>

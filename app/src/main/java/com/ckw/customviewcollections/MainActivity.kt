@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import com.ckw.customviewcollections.drag_view.DragViewActivity
 import com.ckw.customviewcollections.level_view.LevelViewActivity
 import com.ckw.customviewcollections.playpause_view.PlayPauseActivity
+import com.ckw.customviewcollections.radar_view.RadarViewActivity
 import com.ckw.customviewcollections.ruler_view.RulerViewActivity
 import com.ckw.customviewcollections.star_view.StarViewActivity
 import com.ckw.customviewcollections.study.interpolator_evaluator.InterpolatorEvaluatorActivity
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
         datas.add("插值器和Evaluator的自定义使用")
         datas.add("ValueAnimator.ofObject的使用")
         datas.add("PlayPauseView:播放暂停控件")
+        datas.add("RadarView:雷达图")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter
@@ -79,6 +81,10 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
             }
             7 -> {
                 intent = Intent(this, PlayPauseActivity::class.java)
+                startActivity(intent)
+            }
+            8 -> {
+                intent = Intent(this, RadarViewActivity::class.java)
                 startActivity(intent)
             }
         }
