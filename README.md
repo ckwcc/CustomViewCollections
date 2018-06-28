@@ -153,7 +153,8 @@ StarViewLayout是类似于淘宝评价时评分的星星控件
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/starview.gif)
 
 ## 5.PlayPauseView
-PlayPauseView是一个播放暂停按钮
+PlayPauseView是一个播放暂停按钮，具体请看
+[一步步实现自定义View之播放暂停控件](https://blog.csdn.net/ckwccc/article/details/80761974)
 
 ```java
     app:barHeight="30dp"//矩形条的宽度
@@ -183,3 +184,9 @@ PlayPauseView是一个播放暂停按钮
 效果图：
 
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/playpauseview.gif)
+
+## 6.RadarView
+RadarView（雷达图）
+
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/radarview.gif)
+
