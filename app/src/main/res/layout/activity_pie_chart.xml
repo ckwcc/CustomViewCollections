@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.ckw.customviewcollections.pie_chart.SimplePieChartView
+        android:id="@+id/simple_pie_chart"
+        android:layout_centerInParent="true"
+        android:background="@color/colorWhite"
+        app:pieChartRadius="90dp"
+        app:pieChartShowText="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

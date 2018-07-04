@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.view.ViewGroup
 import com.ckw.customviewcollections.drag_view.DragViewActivity
 import com.ckw.customviewcollections.level_view.LevelViewActivity
+import com.ckw.customviewcollections.pie_chart.PieChartActivity
 import com.ckw.customviewcollections.playpause_view.PlayPauseActivity
 import com.ckw.customviewcollections.radar_view.RadarViewActivity
 import com.ckw.customviewcollections.ruler_view.RulerViewActivity
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
         datas.add("ValueAnimator.ofObject的使用")
         datas.add("PlayPauseView:播放暂停控件")
         datas.add("RadarView:雷达图")
+        datas.add("PieChartView:饼状图")
 
         val adapter = SimpleAdapter(this,datas)
         recyclerView.adapter = adapter
@@ -87,6 +89,11 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
                 intent = Intent(this, RadarViewActivity::class.java)
                 startActivity(intent)
             }
+            9 -> {
+                intent = Intent(this, PieChartActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
     }

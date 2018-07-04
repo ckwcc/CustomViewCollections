@@ -92,4 +92,9 @@
         <attr name="radarOuterTextMargin" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="SimplePieChartView">
+        <attr name="pieChartRadius" format="dimension"/>
+        <attr name="pieChartShowText" format="boolean"/>
+    </declare-styleable>
+
 </resources>
