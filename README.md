@@ -48,7 +48,17 @@ RadarView（雷达图）
 
 具体请看：[一步步实现自定义View之流式布局](https://blog.csdn.net/ckwccc/article/details/80782174)
 
-## 5.StarViewLayout
+## 5.PieChartView
+一个简单的饼状图
+
+ 效果图：
+
+![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/piechartview.gif)
+
+具体请看：[一步步实现自定义View之饼状图](https://blog.csdn.net/ckwccc/article/details/80914017)
+
+
+## 6.StarViewLayout
 
 StarViewLayout是类似于淘宝评价时评分的星星控件
 ```java
@@ -75,7 +85,7 @@ StarViewLayout是类似于淘宝评价时评分的星星控件
 
 ![image](https://github.com/ckwcc/CustomViewCollections/blob/master/images/starview.gif)
 
-## 6.RulerView
+## 7.RulerView
 ```java
   app:alphaEnable="true"
   app:lineColor="@color/gray"

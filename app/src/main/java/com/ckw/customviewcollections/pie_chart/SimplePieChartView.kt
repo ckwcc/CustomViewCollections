@@ -38,11 +38,6 @@ class SimplePieChartView : View {
     private var mCenterX = 0f
     private var mCenterY = 0f
 
-    fun setPieClickListener(pieClickListener: PieClickListener) {
-        mPieClickListener = pieClickListener
-
-    }
-
 
     constructor(context: Context?) : this(context,null)
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs,0)
@@ -55,12 +50,12 @@ class SimplePieChartView : View {
         val widthMode = MeasureSpec.getMode(widthMeasureSpec)
         val heightMode = MeasureSpec.getMode(heightMeasureSpec)
         val suggestWidth = MeasureSpec.getSize(widthMeasureSpec)
-        val suggestHeigth = MeasureSpec.getSize(heightMeasureSpec)
+        val suggestHeight = MeasureSpec.getSize(heightMeasureSpec)
 
         if(widthMode == MeasureSpec.AT_MOST || heightMode == MeasureSpec.AT_MOST){
             setMeasuredDimension(mRadius.toInt() * 4,mRadius.toInt() * 4)
         }else{
-            setMeasuredDimension(suggestWidth,suggestHeigth)
+            setMeasuredDimension(suggestWidth,suggestHeight)
         }
     }
 
@@ -69,13 +64,14 @@ class SimplePieChartView : View {
 
          mCenterX = width.div(2).toFloat()
          mCenterY = height.div(2).toFloat()
-        mRectF = RectF(mCenterX - mRadius,mCenterY - mRadius,mCenterX + mRadius,mCenterY + mRadius)
+         mRectF = RectF(mCenterX - mRadius,mCenterY - mRadius,mCenterX + mRadius,mCenterY + mRadius)
     }
 
     private fun init(context: Context, attrs: AttributeSet) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SimplePieChartView)
         mRadius = typedArray.getDimension(R.styleable.SimplePieChartView_pieChartRadius,mRadius)
         mShouldShowText = typedArray.getBoolean(R.styleable.SimplePieChartView_pieChartShowText,mShouldShowText)
+        mTextSize = typedArray.getDimension(R.styleable.SimplePieChartView_pieChartTextSize,mTextSize)
         mDataList = ArrayList()
 
         mLinePath = Path()
@@ -100,8 +96,9 @@ class SimplePieChartView : View {
         mCenterX = width.div(2).toFloat()
         mCenterY = height.div(2).toFloat()
 
-
+        //用于记录每次开始绘制的起始角度
         var startAngle = 0f
+        //每个扇形对应的折线路径的角度（起始角度 + 扇形所占角度的二分之一）
         var pathPercent = 0f
 
         for (index in 0 until mDataList!!.size){
@@ -110,25 +107,27 @@ class SimplePieChartView : View {
             val color = mDataList!![index].picColor!!
             val percent = float.div(100) * 360
 
+            //设置扇形、文字、折线的颜色一致
             mPathPaint!!.color = color
             mPercentPaint!!.color = color
             mTextPaint!!.color = color
 
             pathPercent = startAngle + percent.div(2)
 
-
+            //绘制文字和path
             if(mShouldShowText){
                 if(pathPercent >= 0 && pathPercent < 90){
-                    drawPathAndText(float,pathPercent,0f,1,1,0,canvas!!)
+                    drawPathAndText(float,pathPercent,0f,1,1,0,false,canvas!!)
                 }else if(pathPercent >= 90 && pathPercent < 180){
-                    drawPathAndText(float,pathPercent,90f,-1,1,1,canvas!!)
+                    drawPathAndText(float,pathPercent,90f,-1,1,1,true,canvas!!)
                 }else if(pathPercent >= 180 && pathPercent < 270){
-                    drawPathAndText(float,pathPercent,180f,-1,-1,1,canvas!!)
+                    drawPathAndText(float,pathPercent,180f,-1,-1,1,false,canvas!!)
                 }else{
-                    drawPathAndText(float,pathPercent,270f,1,-1,0,canvas!!)
+                    drawPathAndText(float,pathPercent,270f,1,-1,0,true,canvas!!)
                 }
             }
 
+            //绘制圆弧
             if(mTouchDegree > startAngle && mTouchDegree < (startAngle + percent)){
                 mRectF = RectF(mCenterX - mRadius - mRadius.div(10),mCenterY - mRadius - mRadius.div(10),
                         mCenterX + mRadius + mRadius.div(10) ,mCenterY + mRadius + mRadius.div(10))
@@ -150,15 +149,18 @@ class SimplePieChartView : View {
     * pathPercent 路径需要绘制的起点的角度
     * float 当前绘制的圆弧角度
     * textOffset 绘制的文字是否需要偏移
+    *  quadrant 是否是一三象限
     * */
-    private fun drawPathAndText(float: Float,pathPercent:Float,countDegree: Float,xCoefficient: Int,yCoefficient: Int,textOffset: Int,canvas: Canvas){
+    private fun drawPathAndText(float: Float,pathPercent:Float,countDegree: Float,
+                                xCoefficient: Int,yCoefficient: Int,textOffset: Int,
+                                quadrant: Boolean,canvas: Canvas){
         val sin = Math.sin(Math.toRadians((pathPercent - countDegree).toDouble()))
         val cos = Math.cos(Math.toRadians((pathPercent - countDegree).toDouble()))
-        val pathX = (mCenterX + xCoefficient * mRadius * sin).toFloat()
-        val pathY = (mCenterY + yCoefficient * mRadius * cos).toFloat()
-        val nextX = (mCenterX + xCoefficient * (mRadius.div(2) * 3) * sin).toFloat()
-        val nextY = (mCenterY + yCoefficient * (mRadius.div(2) * 3) * cos).toFloat()
-        val endX = (mCenterX + xCoefficient * (mRadius.div(2) * 3) * sin + xCoefficient * mRadius.div(4)).toFloat()
+        val pathX = (mCenterX + xCoefficient * mRadius * (if (quadrant) sin else cos )).toFloat()
+        val pathY = (mCenterY + yCoefficient * mRadius * (if (quadrant) cos else sin)).toFloat()
+        val nextX = (mCenterX + xCoefficient * (mRadius.div(2) * 3) * (if (quadrant) sin else cos )).toFloat()
+        val nextY = (mCenterY + yCoefficient * (mRadius.div(2) * 3) * (if (quadrant) cos else sin)).toFloat()
+        val endX = (mCenterX + xCoefficient * (mRadius.div(2) * 3) * (if(quadrant) sin else cos) + xCoefficient * mRadius.div(4)).toFloat()
         mLinePath!!.moveTo(pathX,pathY)
         mLinePath!!.lineTo(nextX,nextY)
         mLinePath!!.lineTo(endX,nextY)
@@ -172,18 +174,21 @@ class SimplePieChartView : View {
 
         when(event!!.action){
             MotionEvent.ACTION_DOWN -> {
-                mTouchDegree = getRotationBetweenLines(event.x,event.y)
+                if(judgeTouchRange(event.x,event.y)){
+                    mTouchDegree = getRotationBetweenLines(event.x,event.y)
 
-                var temp = 0f
-                for (index in 0 until mDataList!!.size){
-                    val float = mDataList!![index].percent!!
-                    val percent = float.div(100) * 360
-                    if(mTouchDegree > temp && mTouchDegree <= temp + percent){
-                        mPieClickListener!!.onPieClick(index,float)
+                    var temp = 0f
+                    for (index in 0 until mDataList!!.size){
+                        val float = mDataList!![index].percent!!
+                        val percent = float.div(100) * 360
+                        if(mTouchDegree > temp && mTouchDegree <= temp + percent){
+                            mPieClickListener!!.onPieClick(index,float)
+                        }
+                        temp += percent
                     }
-                    temp += percent
+                    invalidate()
                 }
-                invalidate()
+
             }
             MotionEvent.ACTION_UP -> {
                 
@@ -193,8 +198,18 @@ class SimplePieChartView : View {
 
     }
 
-
-
+    /*
+    * 判断触摸点是否在圆的范围内
+    * */
+    private fun judgeTouchRange(x: Float, y: Float): Boolean {
+        val xAbs = Math.abs(x - mCenterX)
+        val yAbs = Math.abs(y - mCenterY)
+        val pow = Math.pow(xAbs.toDouble(), 2.0) + Math.pow(yAbs.toDouble(), 2.0)
+        if(Math.sqrt(pow) <= mRadius){
+            return true
+        }
+        return false
+    }
 
     /*
     * 开启动画
@@ -253,6 +268,11 @@ class SimplePieChartView : View {
             rotation = 180.0
         }
         return rotation.toFloat()
+    }
+
+    fun setPieClickListener(pieClickListener: PieClickListener) {
+        mPieClickListener = pieClickListener
+
     }
 
     /*

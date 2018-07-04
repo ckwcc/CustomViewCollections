@@ -95,6 +95,7 @@
     <declare-styleable name="SimplePieChartView">
         <attr name="pieChartRadius" format="dimension"/>
         <attr name="pieChartShowText" format="boolean"/>
+        <attr name="pieChartTextSize" format="dimension"/>
     </declare-styleable>
 
 </resources>

@@ -9,6 +9,7 @@
         android:layout_centerInParent="true"
         android:background="@color/colorWhite"
         app:pieChartRadius="90dp"
+        app:pieChartTextSize="15sp"
         app:pieChartShowText="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
